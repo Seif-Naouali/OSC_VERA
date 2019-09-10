@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mobileandroid_3"
+    tools:context=".Accessibility.SignInActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrool">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:onClick="signinhider"
+        android:layout_marginTop="@dimen/Relative_margin"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:textStyle="bold"
+            android:id="@+id/txt_sign_in_0"
+            android:fontFamily="@font/montserrat"
+            android:textSize="66dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="27dp"/>
+
+        <TextView
+            android:id="@+id/txt_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_sign_in_0"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="-12dp"
+            android:fontFamily="@font/montserrat"
+            android:text="to your account"
+            android:textColor="#53F3CE"
+            android:textSize="28dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_sign_in"
+            android:hint="@string/email"
+            android:textColorHint="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#53F3CE"
+            app:boxStrokeWidth="1dp"
+            android:layout_marginRight="29dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:id="@+id/edit_text_email_container"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:textColor="#AEAEAE"
+                android:paddingLeft="@dimen/Text_Padding"
+                android:fontFamily="@font/montserrat"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_text_email"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_email_container"
+            android:hint="@string/Password"
+            app:boxBackgroundMode="outline"
+            android:layout_marginRight="29dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginBottom="29dp"
+            app:boxStrokeColor="#53F3CE"
+            app:boxStrokeWidth="1dp"
+            android:textColorHint="@color/white"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:id="@+id/edit_text_pass_container"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_text_pass"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="@dimen/Text_Padding"
+                android:textColor="#AEAEAE"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:textAllCaps="false"
+        android:layout_marginLeft="29dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/edit_text_pass_container"
+        android:onClick="SignIN"
+        android:id="@+id/btn_confirm_login"
+        android:background="#494E60"
+        android:fontFamily="@font/montserrat"
+       />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_below="@+id/btn_confirm_login"
+            android:id="@+id/layout_view"></View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Don't have an account?"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_below="@+id/layout_view"
+            android:layout_marginBottom="29dp"
+            android:layout_marginTop="50dp"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/no_acc"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Register"
+            android:layout_below="@+id/layout_view"
+            android:textColor="#53F3CE"
+            android:layout_marginBottom="29dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/no_acc"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/sign_up_textview"
+            android:onClick="GoToSignUpActivity"
+
+            />
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

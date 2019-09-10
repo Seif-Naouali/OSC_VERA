@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#1F243C"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="29dp"
+        android:id="@+id/container_of_section"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/goal_pic"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:textColor="@color/white"
+       android:textSize="23dp"
+       android:fontFamily="@font/montserrat"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_marginLeft="20dp"
+       android:text="@string/my_goals"/>
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/line_shutter"
+        android:background="@color/abyedh"
+        android:layout_below="@+id/container_of_section"
+        android:layout_gravity="bottom"></View>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@id/line_shutter"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/binder_to_add_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/add_goals1"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/binder_to_add_goal"
+        android:id="@+id/Goals_details_under_creation"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:boxBackgroundMode="outline"
+            android:layout_marginRight="27dp"
+            android:hint="@string/distance"
+            android:layout_marginLeft="27dp"
+            android:textColorHint="#AEAEAE"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat"
+                android:layout_height="wrap_content"
+                android:id="@+id/Distance_goal_value"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:boxBackgroundMode="outline"
+            android:hint="@string/Calorie"
+            android:layout_marginRight="27dp"
+            android:textColorHint="#AEAEAE"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat"
+                android:layout_height="wrap_content"
+                android:id="@+id/Calories_goal_value"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:boxBackgroundMode="outline"
+            android:hint="@string/date"
+            android:textColorHint="#AEAEAE"
+            android:layout_marginRight="27dp"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat"
+                android:layout_height="wrap_content"
+                android:id="@+id/Date_of_acheivement_goal_value"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/save"
+            android:id="@+id/save_btn_goal"
+            android:background="@color/abyedh"
+            android:layout_marginRight="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="27dp"
+            />
+
+        <View
+            android:layout_width="75dp"
+            android:layout_height="2dp"
+            android:id="@+id/line_shutter2"
+            android:background="@color/abyedh"
+            android:layout_marginRight="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_below="@+id/container_of_section"
+            android:layout_gravity="right"></View>
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/active_goals"
+        android:layout_below="@id/Goals_details_under_creation"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="44dp"
+        android:id="@+id/text_active_goal"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/First_Three"
+        android:layout_below="@+id/text_active_goal"
+        android:orientation="horizontal"
+        android:layout_margin="27dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/First_goal_container"
+            android:layout_weight="2"
+            android:layout_margin="11dp"
+            android:layout_gravity="bottom"
+            android:background="@color/abyedh"
+            android:orientation="vertical"
+            android:layout_height="145dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/distance"
+                android:textColor="@color/avatar_selected"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:id="@+id/Distance_on_goal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="km"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:id="@+id/First_rank_value"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/Second_goal_container"
+            android:layout_weight="2"
+            android:background="@color/abyedh"
+            android:layout_margin="11dp"
+            android:orientation="vertical"
+            android:layout_height="145dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/Calorie"
+                android:textColor="@color/avatar_selected"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:id="@+id/Calorie_on_goal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="cal"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:id="@+id/Second_rank_value"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/Third_goal_container"
+            android:layout_weight="2"
+            android:layout_gravity="bottom"
+            android:background="@color/abyedh"
+            android:layout_margin="11dp"
+            android:orientation="vertical"
+            android:layout_height="145dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/deadline"
+                android:textColor="@color/avatar_selected"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:id="@+id/day_ongoal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/days"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:id="@+id/Third_rank_value"/>
+        </LinearLayout>
+    </LinearLayout>
+<com.dinuscxj.progressbar.CircleProgressBar
+    android:layout_width="170dp"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/goal_prog"
+    app:progress_background_color="@color/avatar_selected"
+    app:line_width="8dp"
+    android:layout_height="120dp"
+    android:layout_below="@+id/First_Three"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/goal_prog"
+        android:text="@string/goal_progress"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_goals"
+            android:text="@string/goals"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+
+            android:layout_below="@id/goal_prog"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_goals_acheived"
+            android:text="@string/goals_acheived"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_below="@id/text_goals"
+            />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_marginTop="7dp"
+           android:layout_below="@+id/text_goals_acheived"
+           android:scrollbars="horizontal"
+           android:id = "@+id/recycler_view_for_acheived_goals"
+           android:layout_height="wrap_content">
+
+
+       </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_goals_future"
+            android:text="@string/future_goals"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_below="@id/recycler_view_for_acheived_goals"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/text_goals_future"
+            android:scrollbars="horizontal"
+            android:id = "@+id/recycler_view_for_future_goals"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myconstaint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="#1F243C"
+    android:orientation="horizontal"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_message_profile"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="50dp"
+        android:src="@drawable/icon_profile_one"
+        />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@drawable/left_bubble"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_message_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/message_sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:elevation="2dp"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/montserrat"
+            android:text="John Doe"
+           android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:textColor="#4AFFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/message_body_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/message_sender_name"
+            android:text="hi man, how are you?"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/text_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:40"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/message_body_text"
+            android:elevation="2dp"
+            android:textColor="#4AFFFFFF"
+            android:layout_marginBottom="15dp"
+            android:textSize="15dp"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

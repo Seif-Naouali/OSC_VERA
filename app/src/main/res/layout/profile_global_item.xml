@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:background="@drawable/bg_filter"
+      android:layout_height="wrap_content"
+      android:id="@+id/user_info_container">
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:id="@+id/team_img"
+          android:layout_marginTop="10dp"
+          android:src="@mipmap/ic_launcher_round"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_margin="@dimen/Text_Margin"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/team_img"
+          android:id="@+id/refname"
+          android:text="Saif Naouali"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/Text_Margin"
+          android:layout_below="@id/team_img"
+          android:layout_alignParentRight="true"
+          android:text="AGE : 22 "/>
+
+
+  </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/user_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_info_container"
+        android:layout_marginTop="-1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/distance_info_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_filter">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/Text_Padding"
+                    android:text="Distance"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.github.guilhe.views.CircularProgressView
+                    android:id="@+id/circularProgressView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:progress="60"
+                    app:progressBarColor="@android:color/holo_purple"
+                    app:progressBarThickness="10dp"></com.github.guilhe.views.CircularProgressView>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="9dp"
+                    android:text="Distance"
+                    android:textColor="#9b92b3"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressView"
+                    app:layout_constraintEnd_toEndOf="@+id/circularProgressView"
+                    app:layout_constraintHorizontal_bias="0.592"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/circularProgressView" />
+
+                <TextView
+                    android:id="@+id/temps_per_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#9b92b3"
+                    android:drawableLeft="@android:drawable/ic_menu_recent_history"
+                    android:gravity="center"
+                    android:text="temps"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.116"
+                    app:layout_constraintStart_toEndOf="@+id/circularProgressView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.161" />
+
+                <TextView
+                    android:id="@+id/temps_value_per_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="1:45:20"
+                    android:textColor="#9b92b3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.211"
+                    app:layout_constraintStart_toEndOf="@+id/circularProgressView"
+                    app:layout_constraintTop_toBottomOf="@+id/temps_per_distance"
+                    app:layout_constraintVertical_bias="0.097" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#9b92b3"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:drawableLeft="@android:drawable/ic_menu_mapmode"
+                    android:gravity="center"
+                    android:text="Map Distance"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.523"
+                    app:layout_constraintStart_toEndOf="@+id/temps_per_distance"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.161" />
+
+                <TextView
+                    android:id="@+id/map_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="32dp"
+                    android:text="5km"
+                    android:textColor="#9b92b3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.852"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:layout_constraintVertical_bias="0.189" />
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/Distance_more_details"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="128dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/arrow_down_float"
+                    app:cb_color="@color/bpRed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/calorie_info_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distance_info_part"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_filter">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="140dp"
+                    android:padding="@dimen/Text_Padding"
+                    android:text="Calorie"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/oval_back"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="58 kal /38 min "
+                    android:textColor="#9b92b3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/Calorie_more_details"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="128dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/arrow_down_float"
+                    app:cb_color="@color/bpRed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/speed_info_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calorie_info_part"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_filter">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="148dp"
+                    android:padding="@dimen/Text_Padding"
+                    android:text="Speed Peak"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.github.guilhe.views.CircularProgressView
+                    android:id="@+id/circularProgressView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:progress="60"
+                    app:progressBarColor="@android:color/holo_purple"
+                    app:progressBarThickness="10dp"></com.github.guilhe.views.CircularProgressView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last_value"
+                    android:textSize="8dp"
+                    android:textColor="#9b92b3"
+                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressView2"
+                    app:layout_constraintEnd_toEndOf="@+id/circularProgressView2"
+                    app:layout_constraintStart_toStartOf="@+id/circularProgressView2"
+                    app:layout_constraintTop_toTopOf="@+id/circularProgressView2" />
+
+
+                <at.markushi.ui.CircleButton
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="128dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/arrow_down_float"
+                    app:cb_color="@color/bpRed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/speed_more_details"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/HeartRate_info_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/speed_info_part"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_filter">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="148dp"
+                    android:padding="@dimen/Text_Padding"
+                    android:text="Heart Rate Zone"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/heart_beat_anim" />
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/Heart_more_details"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="128dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/arrow_down_float"
+                    app:cb_color="@color/bpRed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ElevaationGain_info_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/HeartRate_info_part"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_filter">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:padding="@dimen/Text_Padding"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="160dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Elevation Gain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view2"
+                    android:layout_width="190dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/elevation_gain" />
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/Elevation_more_details"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="128dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/arrow_down_float"
+                    app:cb_color="@color/bpRed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

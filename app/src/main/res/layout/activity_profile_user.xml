@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@mipmap/mobileandroid_2"
+    android:layout_height="match_parent"
+    tools:context=".ProfileAccess.ProfileUser">
+<Button
+    android:layout_width="20dp"
+    android:layout_alignTop="@+id/pic"
+    android:layout_marginLeft="270dp"
+    android:layout_marginTop="50dp"
+    android:layout_height="20dp"
+    android:background="@android:drawable/presence_online"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/profile_man_pic"
+        android:id="@+id/pic"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:layout_below="@+id/pic"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/name"
+        android:text="name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:layout_below="@+id/name"
+        android:id="@+id/XP"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="XP"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:layout_below="@+id/XP"
+        android:layout_marginTop="30dp"
+        android:id="@+id/weight"
+        android:layout_centerHorizontal="true"
+        android:text="weight"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:id="@+id/Rank"
+        android:layout_below="@+id/weight"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Rank"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Rank"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="Acceuil"
+        android:id="@+id/acc"
+        android:textColor="@color/white" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/acc"
+        android:text="modify profile"/>
+
+
+
+</RelativeLayout>

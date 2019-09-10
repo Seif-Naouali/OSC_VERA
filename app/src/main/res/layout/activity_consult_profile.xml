@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#1F243C"
+    android:layout_height="match_parent"
+    tools:context=".ProfileAccess.ConsultProfile">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="29dp"
+        android:id="@+id/container_of_section"
+        >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/montserrat"
+           android:textColor="@color/white"
+           android:layout_centerVertical="true"
+           android:textSize="15dp"
+           android:onClick="returntoprofile"
+           android:text="@string/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:text="Profile"/>
+
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/line_shutter"
+        android:background="@color/abyedh"
+        android:layout_below="@+id/container_of_section"
+        android:layout_gravity="bottom"></View>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="115dp"
+        android:layout_margin="20dp"
+        android:layout_height="115dp"
+        android:id="@+id/img_user_profile"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_profile_one"
+        android:layout_below="@+id/line_shutter"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Ahmed ben salah"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20dp"
+        android:layout_below="@id/img_user_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_name_of_user_profile"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="level 15 | Pro cycler"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/text_name_of_user_profile"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text_user_level_profile"
+        android:textColor="#63FFFFFF"/>
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:progress="70"
+        android:id="@+id/player_progress"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/text_user_level_profile"
+        app:mpb_progressStyle="horizontal"
+        app:mpb_progressTint="#53F3CE"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:mpb_progressBackgroundTint="#17FFFFFF"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:layout_below="@id/player_progress"
+        android:layout_marginTop="35dp"
+        android:textSize="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/text_personal_best"
+        android:layout_marginLeft="20dp"
+        android:text="Personal Best"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_margin="20dp"
+        android:id="@+id/card1"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/abyedh"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/text_personal_best"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="match_parent">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:layout_width="wrap_content"
+              android:id="@+id/icon_dst"
+              android:layout_margin="5dp"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_transfer_within_a_station_black_24dp"/>
+   <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/icon_dst"
+       android:textSize="12dp"
+       android:textColor="@color/white"
+       android:layout_marginBottom="5dp"
+       android:layout_marginLeft="10dp"
+       android:id="@+id/annoncer_dst"
+     android:text="Max Distance"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="@color/avatar_selected"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/annoncer_dst"
+                android:layout_toRightOf="@+id/icon_dst"
+                android:text="25 KM"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_margin="20dp"
+        android:id="@+id/card2"
+        app:cardCornerRadius="10dp"
+        android:layout_alignParentRight="true"
+        app:cardBackgroundColor="@color/abyedh"
+        android:layout_below="@id/text_personal_best"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_whatshot_black_24dp" />
+
+            <TextView
+                android:id="@+id/annoncer_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/icon_cal"
+                android:text="Max Burned Cal"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/annoncer_cal"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/icon_cal"
+                android:textColor="@color/avatar_selected"
+                android:text="15 cal"
+                android:textSize="10dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_margin="20dp"
+        android:id="@+id/card3"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/abyedh"
+        android:layout_below="@id/card1"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/icon_dst3"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timer_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icon_dst3"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/annoncer_dst2"
+                android:text="Duration"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/avatar_selected"
+                android:layout_below="@+id/annoncer_dst2"
+                android:layout_toRightOf="@+id/icon_dst3"
+                android:text="2 hours"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_margin="20dp"
+        android:id="@+id/card4"
+        app:cardCornerRadius="10dp"
+        android:layout_alignParentRight="true"
+        app:cardBackgroundColor="@color/abyedh"
+        android:layout_below="@id/card2"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/icon_dst4"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_transfer_within_a_station_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icon_dst4"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/annoncer_dst3"
+                android:text="Best Speed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="@color/avatar_selected"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/annoncer_dst3"
+                android:layout_toRightOf="@+id/icon_dst4"
+                android:text="32 KM/H"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:onClick="signuphider"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_sign_up"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#53F3CE"
+            android:textSize="28sp"
+            android:layout_marginLeft="@dimen/Text_Margin"
+            android:id="@+id/txt_sign_up_2"
+            android:text="new account"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Register"
+            android:id="@+id/txt_sign_up"
+            android:fontFamily="@font/montserrat"
+
+            android:textColor="@color/white"
+            android:textSize="66sp"
+            android:layout_marginLeft="@dimen/Text_Margin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/username_container"
+            app:boxBackgroundMode="outline"
+            android:layout_centerHorizontal="true"
+            app:boxStrokeColor="#53F3CE"
+
+            app:boxStrokeWidth="1dp"
+            android:layout_margin="20dp"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:layout_below="@id/txt_sign_up_2"
+            android:hint="@string/name"
+            android:textColorHint="@color/white"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="@dimen/Text_Padding"
+            android:textColor="@color/white"
+
+            android:id="@+id/username" />
+        </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_below="@id/username_container"
+    android:id="@+id/edit_text_email_container"
+    android:layout_centerHorizontal="true"
+    app:boxBackgroundMode="outline"
+    app:boxStrokeColor="#53F3CE"
+    app:boxStrokeWidth="1dp"
+   android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:textColorHint="@color/white"
+    app:hintEnabled="true"
+    app:hintAnimationEnabled="true"
+    android:hint="@string/email"
+    android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/Text_Padding"
+
+            android:id="@+id/edit_text_Email"
+            />
+</com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    app:boxBackgroundMode="outline"
+    app:boxStrokeColor="#53F3CE"
+    app:boxStrokeWidth="1dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    app:hintEnabled="true"
+    app:hintAnimationEnabled="true"
+    android:textColorHint="@color/white"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/edit_text_password_container"
+    android:layout_below="@+id/edit_text_email_container"
+    android:layout_height="wrap_content"
+    android:hint="@string/Password">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+
+            android:padding="@dimen/Text_Padding"
+            android:id="@+id/edit_text_password"
+            />
+</com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#53F3CE"
+            app:boxStrokeWidth="1dp"
+            android:textColorHint="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:id="@+id/edit_text_confirm_password_container"
+            android:layout_below="@+id/edit_text_password_container"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/confirm_pass">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/Text_Padding"
+            android:textColor="@color/white"
+            android:id="@+id/edit_text_confirm_password"
+            android:inputType="textPassword"
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+

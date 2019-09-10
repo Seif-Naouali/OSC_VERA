@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:onClick="signuphider"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mobileandroid_3"
+    >
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutDots_sign_up"
+        android:layout_marginBottom="@dimen/Text_Margin"/>
+
+    <LinearLayout
+        android:id="@+id/layoutDots_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#26494E60"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_next_step"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="@string/next"
+        android:textColor="@android:color/white"
+        android:src="@drawable/ic_check_black_24dp"
+        />
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/steps"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

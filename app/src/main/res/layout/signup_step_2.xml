@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="signuphider"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:textSize="23sp"
+            android:id="@+id/personal_info"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/personal_information"/>
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    app:boxBackgroundMode="outline"
+    android:layout_below="@+id/personal_info"
+    android:layout_centerHorizontal="true"
+    app:boxStrokeColor="#53F3CE"
+    app:boxStrokeWidth="1dp"
+    android:id="@+id/weight_container"
+    android:layout_margin="20dp"
+    app:hintEnabled="true"
+    android:textColorHint="@color/white"
+    android:hint="@string/weight"
+    app:hintAnimationEnabled="true"
+    app:boxCornerRadiusTopEnd="5dp"
+    app:boxCornerRadiusBottomEnd="5dp"
+    app:boxCornerRadiusBottomStart="5dp"
+    app:boxCornerRadiusTopStart="5dp"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:id="@+id/weight"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+
+
+</com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:boxBackgroundMode="outline"
+            android:layout_centerHorizontal="true"
+            app:boxStrokeColor="#53F3CE"
+            app:boxStrokeWidth="1dp"
+            android:layout_margin="20dp"
+            app:hintEnabled="true"
+            android:layout_below="@+id/weight_container"
+            android:hint="Date of birth"
+            app:hintAnimationEnabled="true"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            android:textColorHint="@color/white"
+            app:boxCornerRadiusTopStart="5dp"
+            android:id="@+id/date_birth_text_container"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:id="@+id/date_birth_text"
+                android:drawableRight="@android:drawable/ic_menu_agenda"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/date_birth_text_container"
+            android:layout_alignParentRight="true"
+            android:background="@color/ap_transparent"
+            android:layout_marginTop="7dp"
+            android:onClick="PicaDate" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textColor="#AEAEAE"
+            android:layout_margin="30dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:id="@+id/text_gender"
+            android:layout_below="@id/date_birth_text_container"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text_gender"
+            android:layout_below="@id/date_birth_text_container"
+            android:layout_marginTop="20dp"
+            android:id="@+id/bt_male"
+            android:background="#30354A"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginRight="2dp"
+            android:textColor="#AEAEAE"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:text="@string/male"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#AEAEAE"
+            android:fontFamily="@font/montserrat"
+            android:layout_toRightOf="@+id/bt_male"
+            android:layout_marginLeft="2dp"
+            android:layout_below="@id/date_birth_text_container"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:background="#30354A"
+            android:id="@+id/bt_female"
+            android:textSize="14sp"
+            android:text="@string/female"
+            />
+
+
+
+    </RelativeLayout>
+</ScrollView>

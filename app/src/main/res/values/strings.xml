@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">competion</string>
+    <string name="lets_start">Let\'s Start</string>
+    <string name="Skip">skip</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="sign_in">Sign in</string>
+    <string name="Register">Register</string>
+    <string name="Login">Login</string>
+    <string name="email">Email</string>
+    <string name="Password">Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="confirm_pass">confirm password</string>
+    <string name="comeback">Return</string>
+    <string name="information_fill">Please Fill Free to fill the Form</string>
+    <string name="name">In Game pseudo</string>
+    <string name="weight">Weight</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="final_form_fill">Finally , if you want put your profil picture</string>
+    <string name="steps">Steps:</string>
+    <string name="personal_information"><u>Personal Inform</u>ation</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="select_your_game_avatar"><u>Select your gam</u>e avatar</string>
+    <string name="change_avatar">Don\'t worry, you can change it later</string>
+    <string name="take_selfie">OR you can just pick a picture from you gallery!</string>
+    <string name="distance"><u>Distan</u>ce</string>
+    <string name="Calorie"><u>Calor</u>ies</string>
+    <string name="total_distance">Total Distance</string>
+    <string name="personal_best">Personal best</string>
+    <string name="speed"><u>Spee</u>d</string>
+    <string name="average_speed">Average speed</string>
+    <string name="chat_room">Chat Room</string>
+    <string name="player_connected">Player connected</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="players">Players</string>
+    <string name="vitesse">Vitesse</string>
+    <string name="rang">Rang</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="my_goals">My goals</string>
+    <string name="active_goals"><u>Active</u> Goals</string>
+    <string name="add_goals1"><u>+ Add Goa</u>ls</string>
+    <string name="add_goals2"><u>- Add Goa</u>ls</string>
+    <string name="active_time">Active time</string>
+    <string name="deadline"><u>Deadli</u>ne</string>
+    <string name="minutes">minutes</string>
+    <string name="days">days</string>
+    <string name="date">Date</string>
+    <string name="goal_progress">Goal Progress</string>
+    <string name="goals"><u>Goa</u>ls</string>
+    <string name="goals_acheived">Acheived Goals</string>
+    <string name="save">Save</string>
+    <string name="future_goals">Future Goals</string>
+    <string name="back">Back</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="date_of_birth">Date of birth</string>
+
+
+    <!-- String array for spinner on LeaderBoard-->
+
+    <string-array name="leaderboard_array">
+        <item>Distance</item>
+        <item>Speed</item>
+        <item>Calorie</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/welcome"
+        android:layout_margin="@dimen/button_margin"
+        android:id="@+id/one_ranked_img"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorum upsum bebm !"
+        android:layout_marginTop="@dimen/Text_Margin"
+        android:id="@+id/description_one"
+        android:layout_toRightOf="@+id/one_ranked_img"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorum upsum bebm !"
+        android:layout_below="@+id/description_one"
+        android:id="@+id/description_two"
+        android:layout_toRightOf="@+id/one_ranked_img"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorum upsum bebm !"
+        android:layout_below="@+id/description_two"
+        android:id="@+id/description_three"
+        android:layout_toRightOf="@+id/one_ranked_img"
+        />
+
+</RelativeLayout>
